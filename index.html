@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ancient Yoga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!-- Welcome Page -->
+<div id="welcome" class="welcome">
+    <h1>🧘 "Integrated Health Advisory System: Yoga & Modern Medicine💊”</h1>
+    <p>Heal Your Body Naturally</p>
+    <p>Heal Your Body by Medicen</p>
+
+    <button onclick="enterSite()">Enter</button>
+</div>
+<div id="detailPage" class="main" style="display:none;">
+    <div class="split-container">
+
+        <!-- Left Yoga -->
+        <div class="half left">
+            <h2>🧘 Yoga Recommendation</h2>
+            <img id="yogaImage" src="welcome.jpg" alt="Yoga" class="half-image">
+            <p id="yogaDesc"></p>
+            <video id="yogaVideo" width="300" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Right Medicine -->
+        <div class="half right">
+            <h2>💊 Modern Medicine</h2>
+            <img id="medicineImage" src="welcome.jpg" alt="Medicine" class="half-image">
+            <p id="medicineDesc"></p>
+
+            <!-- Accordion -->
+            <div class="accordion">1. Uses</div>
+            <div class="panel" id="medicineUses"></div>
+
+            <div class="accordion">2. Side Effects</div>
+            <div class="panel" id="medicineEffect"></div>
+
+            <div class="accordion">3. Information</div>
+            <div class="panel" id="medicineInfo"></div>
+        </div>
+    </div>
+
+    <!-- Centered Buttons -->
+    <div class="middle-btn">
+        <button onclick="toggleMode()">Dark Mode</button>
+        <button onclick="backToMain()">Back</button>
+    </div>
+</div>
+
+
+<!-- Main Page -->
+<div id="mainPage" class="main" style="display: none;">
+    <h1>Find Treatment for Your Body Pain</h1>
+    <input type="text" id="painInput" placeholder="Type neck, back, leg...">
+    <br><br>
+    <button onclick="findYoga()">Search</button>
+</div>
+
+<!-- Detail Page -->
+ <!-- AI Assistant Button -->
+<div id="aiButton" onclick="openAI()">🤖</div>
+
+<!-- AI Chat Box -->
+<div id="aiChat" class="ai-chat">
+    <div class="ai-header">
+        AI Medical Assistant
+        <span onclick="closeAI()" style="float:right; cursor:pointer;">✖</span>
+    </div>
+
+    <div id="aiMessages" class="ai-messages"></div>
+
+    <input type="text" id="aiInput" placeholder="Ask about medicine..."
+           onkeypress="if(event.key==='Enter') sendMessage()">
+</div>
+<div id="detailPage" class="main" style="display: none;">
+
+    <div class="split-container">
+
+        <!-- Yoga Side -->
+        <div class="half">
+            <h2>🧘 Yoga Treatment</h2>
+            <img id="yogaImage" src="welcome.jpg" class="half-image">
+            <p id="yogaDesc"></p>
+            <video id="yogaVideo" width="300" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Medicine Side -->
+        <div class="half">
+            <h2>💊 Modern Medicine</h2>
+            <img id="medicineImage" src="welcome.jpg" class="half-image">
+            <p id="medicineDesc"></p>
+        </div>
+
+    </div>
+
+    <br>
+    <button onclick="toggleMode()">Dark Mode</button>
+    <button onclick="backToMain()">Back</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
